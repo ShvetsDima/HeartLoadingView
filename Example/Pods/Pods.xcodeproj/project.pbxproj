@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		109C6983D37EE6CE53E330177D9CAE07 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D21284B38DAEDFB78BC39AFFC7E66F /* ReplaceMe.swift */; };
+		2912B47220432C52007E99DD /* HeartLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912B47120432C52007E99DD /* HeartLoadingView.swift */; };
 		2965B6D3ACB77F96DA7A9FA084BE2409 /* HeartLoadingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 857B8B0045C9DC75A43DD0F79C23C20E /* HeartLoadingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F3D83181DF7AEE36F46B4B9DECA382C /* Pods-HeartLoadingView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81AA61FD21E16D73C4E9A9E739902A8E /* Pods-HeartLoadingView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		364473B036088D07BBC8ECDF255EDC5D /* HeartLoadingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EEAAD72347191CF501A773EE5560A /* HeartLoadingView-dummy.m */; };
@@ -31,20 +31,21 @@
 
 /* Begin PBXFileReference section */
 		011132E5595A0CAD8A4D667E10051D0B /* Pods-HeartLoadingView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HeartLoadingView_Example-umbrella.h"; sourceTree = "<group>"; };
-		0A9D3CB7D19CD42400F4C3DA93D0F81F /* HeartLoadingView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HeartLoadingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1112E922395DDF422C0496C5B8550EE2 /* Pods-HeartLoadingView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HeartLoadingView_Example.modulemap"; sourceTree = "<group>"; };
-		1E959CEEBF4C6FCFBB5CF5617744EE48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0A9D3CB7D19CD42400F4C3DA93D0F81F /* HeartLoadingView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = HeartLoadingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1112E922395DDF422C0496C5B8550EE2 /* Pods-HeartLoadingView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HeartLoadingView_Example.modulemap"; sourceTree = "<group>"; };
+		1E959CEEBF4C6FCFBB5CF5617744EE48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1EA5D0B55A67753A68B20B445F357EA6 /* Pods-HeartLoadingView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeartLoadingView_Tests-dummy.m"; sourceTree = "<group>"; };
 		260E87F1AE7190229FD578AA70FA3E1F /* Pods-HeartLoadingView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeartLoadingView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		335C6062CEE41C9D5C8C6621FDD467AC /* Pods_HeartLoadingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HeartLoadingView_Example.framework; path = "Pods-HeartLoadingView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2912B47120432C52007E99DD /* HeartLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartLoadingView.swift; sourceTree = "<group>"; };
+		335C6062CEE41C9D5C8C6621FDD467AC /* Pods_HeartLoadingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartLoadingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4195C25C1638A0B634A192D8B6A7747A /* Pods-HeartLoadingView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeartLoadingView_Example-resources.sh"; sourceTree = "<group>"; };
 		4F0D14D20D1460B272FCDE37EC445AC9 /* HeartLoadingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HeartLoadingView.xcconfig; sourceTree = "<group>"; };
 		5034B63D8B9999ABAD85482EB719B83B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514625DA8BD3A0BE7E22D4DE7CA1C18A /* Pods-HeartLoadingView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HeartLoadingView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		54315B478F50B19DFD0C725E6FCFFBF9 /* Pods-HeartLoadingView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeartLoadingView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		59F3BB9C28188F738FDBBB5C2C6DFD13 /* Pods-HeartLoadingView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeartLoadingView_Example-dummy.m"; sourceTree = "<group>"; };
-		621245B67F03C92B1FC974E037665564 /* HeartLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HeartLoadingView.framework; path = HeartLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6403B5B35D40B9E352CB34AA0C32B1BD /* Pods-HeartLoadingView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HeartLoadingView_Tests.modulemap"; sourceTree = "<group>"; };
+		621245B67F03C92B1FC974E037665564 /* HeartLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeartLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6403B5B35D40B9E352CB34AA0C32B1BD /* Pods-HeartLoadingView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HeartLoadingView_Tests.modulemap"; sourceTree = "<group>"; };
 		64DCF8F4A31D9D79B0516318D2A3DE95 /* Pods-HeartLoadingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeartLoadingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69D112848CA9F29945DA6898EBDB9DB4 /* Pods-HeartLoadingView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HeartLoadingView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -52,19 +53,18 @@
 		6FD05065C74229E2BA6FA4E7E8402AD4 /* Pods-HeartLoadingView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeartLoadingView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		7040EA122F1E3AF0DB866869A605DE8A /* Pods-HeartLoadingView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeartLoadingView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		73A8FA90C1CF81354B5470E43833DDC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7645514F30CA4431FAA27615AAF907C1 /* HeartLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HeartLoadingView.modulemap; sourceTree = "<group>"; };
+		7645514F30CA4431FAA27615AAF907C1 /* HeartLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HeartLoadingView.modulemap; sourceTree = "<group>"; };
 		81AA61FD21E16D73C4E9A9E739902A8E /* Pods-HeartLoadingView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HeartLoadingView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		857B8B0045C9DC75A43DD0F79C23C20E /* HeartLoadingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HeartLoadingView-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		969B2A539AAE0FB27C106E7F65C88745 /* Pods_HeartLoadingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HeartLoadingView_Tests.framework; path = "Pods-HeartLoadingView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		969B2A539AAE0FB27C106E7F65C88745 /* Pods_HeartLoadingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartLoadingView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3EEAAD72347191CF501A773EE5560A /* HeartLoadingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HeartLoadingView-dummy.m"; sourceTree = "<group>"; };
 		A28893DD16AF91364BF8DA39D21937D8 /* Pods-HeartLoadingView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeartLoadingView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AB8252F316CFDF7D9CFBB5D449EEB35F /* Pods-HeartLoadingView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeartLoadingView_Tests-resources.sh"; sourceTree = "<group>"; };
 		B4643DDC64A5249D0088442B3D62DDDC /* Pods-HeartLoadingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeartLoadingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BF81B92417ABA73982EB8A2BA1CF5AB3 /* Pods-HeartLoadingView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeartLoadingView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C34218E0CCB0E104F2F03354399AABCD /* HeartLoadingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HeartLoadingView-prefix.pch"; sourceTree = "<group>"; };
-		C6D21284B38DAEDFB78BC39AFFC7E66F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = HeartLoadingView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		C909B19A65E1431D8FFB5FEC1B4FEA3A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C909B19A65E1431D8FFB5FEC1B4FEA3A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2912B46F20432C25007E99DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2912B47120432C52007E99DD /* HeartLoadingView.swift */,
+			);
+			name = Classes;
+			path = HeartLoadingView/Classes;
+			sourceTree = "<group>";
+		};
 		361C2439C3AF014D154ECA5565D18F38 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +115,7 @@
 		4149D2E37D37D89DB0F557846673479B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				2912B46F20432C25007E99DD /* Classes */,
 				0A9D3CB7D19CD42400F4C3DA93D0F81F /* HeartLoadingView.podspec */,
 				C909B19A65E1431D8FFB5FEC1B4FEA3A /* LICENSE */,
 				1E959CEEBF4C6FCFBB5CF5617744EE48 /* README.md */,
@@ -196,7 +206,6 @@
 		B5D0C8AD79C0C3663A70FDFB9B9E55F8 /* HeartLoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				C6D21284B38DAEDFB78BC39AFFC7E66F /* ReplaceMe.swift */,
 				4149D2E37D37D89DB0F557846673479B /* Pod */,
 				9E846B8BAFDD2EEBC45C98662DC4087B /* Support Files */,
 			);
@@ -309,7 +318,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					500818D063EF9FA100C0BA27111444B1 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,8 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2912B47220432C52007E99DD /* HeartLoadingView.swift in Sources */,
 				364473B036088D07BBC8ECDF255EDC5D /* HeartLoadingView-dummy.m in Sources */,
-				109C6983D37EE6CE53E330177D9CAE07 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +592,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -620,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F0D14D20D1460B272FCDE37EC445AC9 /* HeartLoadingView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -652,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F0D14D20D1460B272FCDE37EC445AC9 /* HeartLoadingView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
