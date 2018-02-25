@@ -1,0 +1,16 @@
+PODS:
+  - HeartLoadingView (0.1.0)
+
+DEPENDENCIES:
+  - HeartLoadingView (from `../`)
+
+EXTERNAL SOURCES:
+  HeartLoadingView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HeartLoadingView: 83f48ff81fdf61909aa3443a39307c48b1313cb6
+
+PODFILE CHECKSUM: 593999bc3f31ccca1f3aec6298849e286c1791d6
+
+COCOAPODS: 1.4.0

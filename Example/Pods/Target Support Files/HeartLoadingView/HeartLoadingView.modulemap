@@ -1,0 +1,6 @@
+framework module HeartLoadingView {
+  umbrella header "HeartLoadingView-umbrella.h"
+
+  export *
+  module * { export * }
+}
