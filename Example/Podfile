@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HeartLoadingView_Example' do
+  pod 'HeartLoadingView', :path => '../'
+
+  target 'HeartLoadingView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
