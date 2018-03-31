@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2912B47220432C52007E99DD /* HeartLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912B47120432C52007E99DD /* HeartLoadingView.swift */; };
+		2917A89220488F07004A8E1A /* UIBezierPath+Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917A89120488F07004A8E1A /* UIBezierPath+Heart.swift */; };
+		2917A89420488F46004A8E1A /* Int+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917A89320488F46004A8E1A /* Int+Radians.swift */; };
 		2965B6D3ACB77F96DA7A9FA084BE2409 /* HeartLoadingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 857B8B0045C9DC75A43DD0F79C23C20E /* HeartLoadingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F3D83181DF7AEE36F46B4B9DECA382C /* Pods-HeartLoadingView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81AA61FD21E16D73C4E9A9E739902A8E /* Pods-HeartLoadingView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		364473B036088D07BBC8ECDF255EDC5D /* HeartLoadingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3EEAAD72347191CF501A773EE5560A /* HeartLoadingView-dummy.m */; };
@@ -37,6 +39,8 @@
 		1EA5D0B55A67753A68B20B445F357EA6 /* Pods-HeartLoadingView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeartLoadingView_Tests-dummy.m"; sourceTree = "<group>"; };
 		260E87F1AE7190229FD578AA70FA3E1F /* Pods-HeartLoadingView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeartLoadingView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2912B47120432C52007E99DD /* HeartLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartLoadingView.swift; sourceTree = "<group>"; };
+		2917A89120488F07004A8E1A /* UIBezierPath+Heart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Heart.swift"; sourceTree = "<group>"; };
+		2917A89320488F46004A8E1A /* Int+Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Radians.swift"; sourceTree = "<group>"; };
 		335C6062CEE41C9D5C8C6621FDD467AC /* Pods_HeartLoadingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartLoadingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4195C25C1638A0B634A192D8B6A7747A /* Pods-HeartLoadingView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeartLoadingView_Example-resources.sh"; sourceTree = "<group>"; };
 		4F0D14D20D1460B272FCDE37EC445AC9 /* HeartLoadingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HeartLoadingView.xcconfig; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2912B47120432C52007E99DD /* HeartLoadingView.swift */,
+				2917A89320488F46004A8E1A /* Int+Radians.swift */,
+				2917A89120488F07004A8E1A /* UIBezierPath+Heart.swift */,
 			);
 			name = Classes;
 			path = HeartLoadingView/Classes;
@@ -365,8 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2917A89420488F46004A8E1A /* Int+Radians.swift in Sources */,
 				2912B47220432C52007E99DD /* HeartLoadingView.swift in Sources */,
 				364473B036088D07BBC8ECDF255EDC5D /* HeartLoadingView-dummy.m in Sources */,
+				2917A89220488F07004A8E1A /* UIBezierPath+Heart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

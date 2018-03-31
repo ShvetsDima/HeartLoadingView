@@ -7,17 +7,45 @@
 //
 
 import UIKit
+import HeartLoadingView
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var loadingView: HeartLoadingView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func getRandomColor() -> UIColor {
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
+    }
+    
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController {
+    
+    @IBAction func didChangeProgress(_ sender: UISlider) {
+        loadingView.progress = Double(sender.value)
+    }
+    
+    @IBAction func didChangeAmplitude(_ sender: UISlider) {
+        loadingView.heartAmplitude = Double(sender.value)
+    }
+    
+    @IBAction func didShowProgressText(_ sender: UISwitch) {
+        loadingView.isShowProgressText = sender.isOn
+    }
+    
+    @IBAction func changeColor(_ sender: UIButton) {
+        let randomColor = self.getRandomColor()
+        loadingView.heavyHeartColor = randomColor
+        loadingView.lightHeartColor = randomColor.withAlphaComponent(0.5)
+        loadingView.fillHeartColor = randomColor.withAlphaComponent(0.2)
+        
     }
 
 }

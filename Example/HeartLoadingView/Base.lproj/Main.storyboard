@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +22,107 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shg-q2-JEb" customClass="HeartLoadingView" customModule="HeartLoadingView">
+                                <rect key="frame" x="24" y="28" width="327" height="327"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Shg-q2-JEb" secondAttribute="height" multiplier="1:1" id="QSV-CJ-nSD"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ihr-iA-9hW">
+                                <rect key="frame" x="24" y="363" width="327" height="133"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-3k-9KX">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="133"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vUj-VW-gJ4">
+                                                <rect key="frame" x="-2" y="0.0" width="167.5" height="32"/>
+                                                <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="didChangeProgress:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4gi-MK-37L"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6EJ-ZH-bMS">
+                                                <rect key="frame" x="-2" y="51" width="167.5" height="32"/>
+                                                <color key="tintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="didChangeAmplitude:" destination="vXZ-lx-hvc" eventType="valueChanged" id="q3D-ba-Uhe"/>
+                                                </connections>
+                                            </slider>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-NK-RgI">
+                                                <rect key="frame" x="0.0" y="102" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="didShowProgressText:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eDS-Pv-vHh"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vUj-VW-gJ4" secondAttribute="trailing" id="3iQ-7X-4JW"/>
+                                            <constraint firstAttribute="trailing" secondItem="6EJ-ZH-bMS" secondAttribute="trailing" id="EIZ-tR-Eij"/>
+                                            <constraint firstItem="vUj-VW-gJ4" firstAttribute="leading" secondItem="5ef-3k-9KX" secondAttribute="leading" id="NaQ-T9-Tdv"/>
+                                            <constraint firstItem="6EJ-ZH-bMS" firstAttribute="leading" secondItem="5ef-3k-9KX" secondAttribute="leading" id="bk7-wK-Ig6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M2j-Cl-1Ce">
+                                        <rect key="frame" x="163.5" y="0.0" width="163.5" height="133"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYq-T2-6qf">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amplitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-Db-c0m">
+                                                <rect key="frame" x="0.0" y="51" width="163.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Text" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-jb-uNX">
+                                                <rect key="frame" x="0.0" y="102" width="163.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Z-5X-QX5">
+                                <rect key="frame" x="8" y="504" width="359" height="33"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <state key="normal" title="Set Random Color">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Rn-m9-gwe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihr-iA-9hW" secondAttribute="trailing" constant="8" id="0ee-Tp-xT1"/>
+                            <constraint firstItem="Shg-q2-JEb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5fh-Dc-fRt"/>
+                            <constraint firstItem="Shg-q2-JEb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="FjD-lX-gfo"/>
+                            <constraint firstItem="p3Z-5X-QX5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="IGV-DO-w1Q"/>
+                            <constraint firstItem="ihr-iA-9hW" firstAttribute="top" secondItem="Shg-q2-JEb" secondAttribute="bottom" constant="8" id="JUG-aH-DLE"/>
+                            <constraint firstItem="Shg-q2-JEb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="bzZ-Zn-Qy0"/>
+                            <constraint firstItem="ihr-iA-9hW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="gfb-xg-RN4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Shg-q2-JEb" secondAttribute="trailing" constant="8" id="i8A-4e-eWr"/>
+                            <constraint firstAttribute="trailing" secondItem="p3Z-5X-QX5" secondAttribute="trailing" constant="8" id="ivb-u8-JUl"/>
+                            <constraint firstItem="p3Z-5X-QX5" firstAttribute="top" secondItem="ihr-iA-9hW" secondAttribute="bottom" constant="8" id="mNb-cr-JYE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingView" destination="Shg-q2-JEb" id="T5T-9d-4qf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

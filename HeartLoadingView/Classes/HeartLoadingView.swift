@@ -7,47 +7,31 @@
 
 import UIKit
 
-class HeartLoadingView: UIView {
+public class HeartLoadingView: UIView {
     
-    var originX = 0.0
-    static private let amplitude_min = 16.0
-    static private let amplitude_span = 26.0
-    
+    private var originX = 0.0
     private let cycle = 1.0
     private var term = 60.0
     private var phasePosition = 0.0
     private var amplitude = 29.0
     private var position = 40.0
-    
-    private let waveMoveSpan = 5.0
+    private let animationMoveSpan = 5.0
     private let animationUnitTime = 0.08
     
-    private let heavyColor = UIColor(red: 254/255.0, green: 102/255.0, blue: 131/255.0, alpha: 1.0)
-    private let lightColor = UIColor(red: 254/255.0, green: 168/255.0, blue: 194/255.0, alpha: 1.0)
+    public var heavyHeartColor = UIColor(red: 254/255.0, green: 102/255.0, blue: 131/255.0, alpha: 1.0)
+    public var lightHeartColor = UIColor(red: 254/255.0, green: 168/255.0, blue: 194/255.0, alpha: 1.0)
+    public var fillHeartColor = UIColor(red: 248/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
     
-    private let clipCircleColor = UIColor.gray
-    private let fillCircleColor = UIColor(red: 248/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
+    public let progressTextFont: UIFont = UIFont.systemFont(ofSize: 15.0)
+    public var isShowProgressText = true
     
-    private var clipCircleLineWidth: CGFloat = 1
+    public var isAnimated: Bool = true
     
-    private let progressTextFontSize: CGFloat = 15.0
-    
-    private var waving: Bool = true
-    
-    class var amplitudeMin: Double {
-        get { return amplitude_min }
-    }
-    class var amplitudeSpan: Double {
-        get { return amplitude_span }
+    public var progress: Double = 0.5 {
+        didSet { self.setNeedsDisplay() }
     }
     
-    var progress: Double = 0.5 {
-        didSet {
-            self.setNeedsDisplay()
-        }
-    }
-    
-    var waveAmplitude: Double {
+    public var heartAmplitude: Double {
         get { return amplitude }
         set {
             amplitude = newValue
@@ -55,72 +39,59 @@ class HeartLoadingView: UIView {
         }
     }
     
-    var borderWidth: CGFloat {
-        get { return clipCircleLineWidth }
-        set {
-            clipCircleLineWidth = newValue
-            self.setNeedsDisplay()
-        }
-    }
-    
-    var isShowProgressText = true
-    
-    override func awakeFromNib() {
-        animationWave()
+    override public func awakeFromNib() {
+        animationHeart()
         self.backgroundColor = UIColor.clear
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        animationWave()
+        animationHeart()
         self.backgroundColor = UIColor.clear
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    deinit { }
-    
-    override func draw(_ rect: CGRect) {
+        
+    override public func draw(_ rect: CGRect) {
         position =  (1 - progress) * Double(rect.height)
         
-        clipWithCircle()
+        clipWithHeart()
         
-        drawWaveWater(originX: originX - term / 5, fillColor: lightColor)
-        drawWaveWater(originX: originX, fillColor: heavyColor)
+        drawHeartWave(originX: originX - term / 5, fillColor: lightHeartColor)
+        drawHeartWave(originX: originX, fillColor: heavyHeartColor)
         
         if isShowProgressText {
             drawProgressText()
         }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         term =  Double(self.bounds.size.width) / cycle
     }
     
-    override func removeFromSuperview() {
+    override public func removeFromSuperview() {
         super.removeFromSuperview()
-        waving = false
+        isAnimated = false
     }
     
-    func clipWithCircle() {
-        let circleRectWidth = min(self.bounds.size.width, self.bounds.size.height) - 2 * clipCircleLineWidth
-        let circleRectOriginX = (self.bounds.size.width - circleRectWidth) / 2
-        let circleRectOriginY = (self.bounds.size.height - circleRectWidth) / 2
-        let circleRect = CGRect(x: circleRectOriginX, y: circleRectOriginY,
-                                width: circleRectWidth, height: circleRectWidth)
+    func clipWithHeart() {
+        let heartRectWidth = min(self.bounds.size.width, self.bounds.size.height)
+        let heartRectOriginX = (self.bounds.size.width - heartRectWidth) / 2
+        let heartRectOriginY = (self.bounds.size.height - heartRectWidth) / 2
+        let heartRect = CGRect(x: heartRectOriginX, y: heartRectOriginY, width: heartRectWidth, height: heartRectWidth)
         
-        //let clipPath = UIBezierPath(heartIn: circleRect)
+        let clipPath = UIBezierPath(heartIn: heartRect)
         
-        fillCircleColor.setFill()
+        fillHeartColor.setFill()
         clipPath.fill()
         clipPath.addClip()
     }
     
     
-    func drawWaveWater(originX: Double, fillColor: UIColor) {
+    func drawHeartWave(originX: Double, fillColor: UIColor) {
         let curvePath = UIBezierPath()
         curvePath.move(to: CGPoint(x: originX, y: position))
         
@@ -147,32 +118,30 @@ class HeartLoadingView: UIView {
         
         let progressText = (NSString(format: "%.0f", validProgress) as String) + "%"
         
-        var attribute: [NSAttributedStringKey : Any]!
+        var attributes: [NSAttributedStringKey : Any] = [.font: progressTextFont]
         if progress > 0.45 {
-            attribute = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont.systemFont(ofSize: progressTextFontSize),
-                         NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : UIColor.white]
+            attributes.updateValue(UIColor.white, forKey: .foregroundColor)
         } else {
-            attribute = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont.systemFont(ofSize: progressTextFontSize),
-                         NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : heavyColor]
+            attributes.updateValue(heavyHeartColor, forKey: .foregroundColor)
         }
         
-        let textSize = progressText.size(withAttributes: attribute)
+        let textSize = progressText.size(withAttributes: attributes)
         let textRect = CGRect(x: self.bounds.width/2 - textSize.width/2,
                               y: self.bounds.height/2 - textSize.height/2, width:textSize.width, height:textSize.height)
         
-        progressText.draw(in: textRect, withAttributes: attribute)
+        progressText.draw(in: textRect, withAttributes: attributes)
     }
     
     
-    func animationWave() {
+    func animationHeart() {
         DispatchQueue.global(qos: .default).async { [weak self]() -> Void in
             if self != nil {
                 let tempOriginX = self!.originX
-                while self != nil && self!.waving {
+                while self != nil && self!.isAnimated {
                     if self!.originX <= tempOriginX - self!.term {
-                        self!.originX = tempOriginX - self!.waveMoveSpan
+                        self!.originX = tempOriginX - self!.animationMoveSpan
                     } else {
-                        self!.originX -= self!.waveMoveSpan
+                        self!.originX -= self!.animationMoveSpan
                     }
                     DispatchQueue.main.async(execute: { () -> Void in
                         self!.setNeedsDisplay()
@@ -187,7 +156,6 @@ class HeartLoadingView: UIView {
     func keyPoint(x: Double, originX: Double) -> CGPoint {
         return CGPoint(x: x, y: columnYPoint(x: x - originX))
     }
-    
     
     func columnYPoint(x: Double) -> Double {
         let result = amplitude * sin((2 * Double.pi / term) * x + phasePosition)
