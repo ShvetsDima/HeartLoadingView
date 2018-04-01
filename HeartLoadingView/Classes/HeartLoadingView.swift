@@ -44,7 +44,7 @@ public class HeartLoadingView: UIView {
         self.backgroundColor = UIColor.clear
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         animationHeart()
         self.backgroundColor = UIColor.clear
