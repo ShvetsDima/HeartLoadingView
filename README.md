@@ -33,7 +33,6 @@ Color                      |  Progress Text
 
 ```
 let heartLoadingView = HeartLoadingView(frame: yourFrame)
-
 ```
 
 ## Customization
@@ -42,28 +41,24 @@ let heartLoadingView = HeartLoadingView(frame: yourFrame)
 
 ```
 heartLoadingView.progress = 0.5
-
 ```
 
 2. Amplitude
 
 ```
 heartLoadingView.amplitude = 50.0
-
 ```
 
 3. Progress Text
 
 ```
 heartLoadingView.isShowProgressText = true
-
 ```
 
 4. Progress Text Font
 
 ```
 heartLoadingView.progressTextFont = UIFont.systemFont(ofSize: 15.0)
-
 ```
 
 5. Colors
@@ -72,14 +67,12 @@ heartLoadingView.progressTextFont = UIFont.systemFont(ofSize: 15.0)
 heartLoadingView.heavyHeartColor = randomColor
 heartLoadingView.lightHeartColor = randomColor.withAlphaComponent(0.5)
 heartLoadingView.fillHeartColor = randomColor.withAlphaComponent(0.2)
-
 ```
 
 6. Animation
 
 ```
 heartLoadingView.isAnimated = true
-
 ```
 
 ## Installation
