@@ -92,10 +92,6 @@ it, simply add the following line to your Cartfile:
 github "ShvetsDima/HeartLoadingView"
 ```
 
-## Author
-
-Dima Shvets, aoedima@gmail.com
-
 ## License
 
 HeartLoadingView is available under the MIT license. See the LICENSE file for more info.
