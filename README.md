@@ -2,7 +2,6 @@
 
 # ![./HeartLoadingView](https://github.com/ShvetsDima/HeartLoadingView/blob/master/Assets/theme.png)
 [![Language](https://img.shields.io/badge/language-Swift-orange.svg?style=flat)]()
-[![Supports](https://img.shields.io/badge/supports-Carthage-green.svg?style=flat)]()
 <br />
 
 [![Twitter: @GhazouaniHamza](https://img.shields.io/badge/contact-@Bear_Tooth-blue.svg?style=flat)](https://twitter.com/Bear_Tooth)
@@ -72,14 +71,7 @@ heartLoadingView.isAnimated = true
 
 ## Installation
 
-HeartLoadingView can be integrated using [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
-
-
-``` ruby
-github "ShvetsDima/HeartLoadingView"
-```
-
-You can also integrate the library manually by copying the source files into your project.
+You can integrate HeartLoadingView by manually copying the source files into your project.
 
 ## License
 
