@@ -1,18 +1,13 @@
 # HeartLoadingView
 
 # ![./HeartLoadingView](https://github.com/ShvetsDima/HeartLoadingView/blob/master/Assets/theme.png)
-[![Version](https://img.shields.io/cocoapods/v/HeartLoadingView.svg?style=flat)](http://cocoapods.org/pods/HeartLoadingView)
 [![Language](https://img.shields.io/badge/language-Swift-orange.svg?style=flat)]()
-[![Supports](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg?style=flat)]()
-[![License](https://img.shields.io/cocoapods/l/HeartLoadingView.svg?style=flat)](http://cocoapods.org/pods/HeartLoadingView)
-[![Platform](https://img.shields.io/cocoapods/p/HeartLoadingView.svg?style=flat)](http://cocoapods.org/pods/HeartLoadingView)
+[![Supports](https://img.shields.io/badge/supports-Carthage-green.svg?style=flat)]()
 <br />
 
 [![Twitter: @GhazouaniHamza](https://img.shields.io/badge/contact-@Bear_Tooth-blue.svg?style=flat)](https://twitter.com/Bear_Tooth)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Preview
 
 Progress                   |  Amplitude
 :-------------------------:|:-------------------------:
@@ -77,20 +72,14 @@ heartLoadingView.isAnimated = true
 
 ## Installation
 
-HeartLoadingView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'HeartLoadingView'
-```
-
-HeartLoadingView is also available through [Carthage](https://github.com/Carthage/Carthage). To install
-it, simply add the following line to your Cartfile:
+HeartLoadingView can be integrated using [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
 
 
 ``` ruby
 github "ShvetsDima/HeartLoadingView"
 ```
+
+You can also integrate the library manually by copying the source files into your project.
 
 ## License
 
