@@ -71,6 +71,18 @@ heartLoadingView.isAnimated = true
 
 ## Installation
 
+### Swift Package Manager
+
+To integrate using Swift Package Manager, add the following dependency in your Package.swift:
+
+```swift
+.package(url: "https://github.com/ShvetsDima/HeartLoadingView.git", from: "1.0.0")
+```
+
+Then add `HeartLoadingView` to your target's dependencies.
+
+### Manually
+
 You can integrate HeartLoadingView by manually copying the source files into your project.
 
 ## License
